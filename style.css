@@ -1,0 +1,104 @@
+body,html{
+    font-size: small;
+}
+header{
+    margin-bottom: 60px;
+    display: block;
+    height: 50px;
+    
+}
+.nav-bar{
+    display: block;
+}
+.nav-bar nav{
+display: inline;
+float: right;
+}
+.nav-bar ul li{
+    display: inline-block;
+    
+}
+.nav-bar a{
+    margin-right: 10px;
+}
+/* main section */
+main{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.image{
+    display: block;
+    text-align: center;
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50%;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid rgb(192, 188, 188);
+    position: relative;
+    left: 25%;
+   
+}
+.input i{
+    color: rgb(77, 77, 214);
+}
+.button{
+    display: inline;
+    padding: 5%;
+    align-items: center;
+}
+.button button{
+    border-radius: 5px;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 215, 215);
+    height: 30px;
+}
+.kenya{
+    display:block;
+    position: relative;
+    left: 3%;
+}
+.footer-bars{
+    display: flex;
+    justify-content: space-between;
+}
+.first{
+    display: block;
+}
+.first ul li{
+    display:block;
+    float: left;
+    margin: 5px;
+    text-transform: capitalize;
+
+}
+.second{
+    display: block;
+}
+.second ul li{
+    display:block;
+    float: right;
+    margin: 5px;
+    text-transform: capitalize;
+
+}
+hr{
+    color: black;
+}
