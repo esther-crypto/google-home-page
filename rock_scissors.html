@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+      body{
+        box-sizing: border-box;
+        width: 90vw;
+        max-width: 90vw;
+    
+      }
+      main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        border-radius: 10px;
+        width: 70%;
+        background-color: rgb(211, 214, 218);
+      }
+      .results{
+        display: block;
+        margin: 20px;
+        text-align: center;
+      }
+      table {
+        width: 80%;
+        background-color: rgb(214, 209, 212);
+        margin: 20px;
+        text-align: center;
+        position: relative;
+        left: 10%;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+      th {
+        text-align: left;
+        background-color: rgb(148, 24, 86);
+        color: #ffffff;
+      }
+      caption{
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .human-player{
+        display: block;
+        margin: 20px;
+        text-align: center;
+        
+      }
+      .human-player h4{
+        font-size: 40px;
+        text-decoration-style: wavy;
+        margin: 20px;
+
+      }
+      .human-player p{
+        font-size: 25px;
+        outline: indigo;
+        margin: 20px;
+        font-family: 'Lobster', cursive;
+      }
+      .human-player button{
+        height: 30px;
+        width: 100px;
+        background-color: rgb(148, 24, 86);
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        color: #ffffff;
+      }
+     
+      .icons-holder{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .icon:hover{
+        transform: scale(1.02);
+        box-shadow: 5px 5px 5px 5px rgb(112, 108, 108);
+        transition: ease-out;
+      }
+      .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgb(250, 239, 244);
+        border: 20px solid rgb(148, 24, 86);
+      }
+      .icon i{
+        color: black;
+        font-size: 50px;
+      }
+   
+    </style>
+  </head>
+  <body>
+    <script>
+      function computerPlay() {
+        var choices = Math.random();
+        if (choices > 0 && results < 0.33) {
+          return "rock";
+        } else if (choices > 0.34 && results < 0.67) {
+          return "paper";
+        } else {
+          return "scissors";
+        }
+      }
+      function playRound(playerSelection, computerSelection) {
+        //player chooses paper
+        if (playerSelection === "paper") {
+          if (computerSelection === "rock") {
+            return "paper wins";
+          } else {
+            if (computerSelection === "scissors") {
+              return "scissors wins";
+            }
+          }
+        }
+
+        //player chooses rock
+        if (playerSelection === "rock") {
+          if (computerSelection === "scissors") {
+            return "rock wins";
+          } else {
+            if (computerSelection === "paper") {
+              return "paper wins";
+            }
+          }
+        }
+        //player selects scissors
+        if (playerSelection === "scissors") {
+          if (computerSelection === "rock") {
+            return "rock wins";
+          } else {
+            if (computerSelection === "paper") {
+              return "scissors wins";
+            }
+          }
+        }
+      }
+      function game() {}
+
+      const playerSelection = "rock";
+      const computerSelection = computerPlay();
+      console.log(playRound(playerSelection, computerSelection));
+    </script>
+
+    <main>
+      <div class="human-player">
+        <h4>Lets play this game together</h4>
+        <p>Which one do you wisth to select, rock, paper, or scissors?</p>
+<div class="icons-holder">
+  <div class="icon">
+    <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+  </div>
+  <div class="icon">
+    <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+  </div>
+  <div class="icon">
+    <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+  </div>
+</div>
+      </div>
+      <div class="results">
+        <table>
+          <caption>
+            Game Results
+          </caption>
+          <tr>
+            <th>Rounds</th>
+            <th>Human Player</th>
+            <th>Computer</th>
+          </tr>
+          <tr>
+            <td>Round 1</td>
+            <td>results</td>
+            <td>results</td>
+          </tr>
+          <tr>
+            <td>Round 2</td>
+            <td>results</td>
+            <td>results</td>
+          </tr>
+          <tr>
+            <td>Round 3</td>
+            <td>results</td>
+            <td>results</td>
+          </tr>
+          <tr>
+            <td>Round 4</td>
+            <td>results</td>
+            <td>results</td>
+          </tr>
+          <tr>
+            <td>Round 5</td>
+            <td>results</td>
+            <td>results</td>
+          </tr>
+        </table>
+      </div>
+<div class="winner">
+
+
+</div>
+
+    </main>
+  </body>
+</html>
